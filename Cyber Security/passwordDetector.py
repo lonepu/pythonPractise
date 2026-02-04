@@ -1,8 +1,8 @@
-password = input("စစ်ဆေးမယ့် Password ကို ရိုက်ထည့်ပါ: ")
+password = input("Enter your password: ")
 
 if len(password) < 8:
-    print("❌ အရမ်းတိုလွန်းတယ်! အနည်းဆုံး ၈ လုံး ရှိရမယ်။")
+    print("Password is too short! It should be at least 8 characters.")
 elif password.isalpha():
-    print("⚠️ ဂဏန်းတွေလည်း ထည့်သင့်တယ်နော်။")
+    print("Digits are missing! Include at least one number.")
 else:
-    print("✅ ဒါကတော့ အားကောင်းတဲ့ Password ပါ!")
+    print("Password is strong.")

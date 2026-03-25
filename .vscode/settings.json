@@ -1,0 +1,34 @@
+{
+    // Specifies the path to the Python interpreter.
+    // The Python extension will use this interpreter for running code, debugging, and language features like IntelliSense.
+    // Using a variable like ${workspaceFolder} makes the path relative to your project root.
+    "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python", // Example for macOS/Linux
+    // "python.defaultInterpreterPath": "${workspaceFolder}\\.venv\\Scripts\\python.exe", // Example for Windows
+
+    // Sets the default formatter for Python files (e.g., "black", "autopep8", "yapf").
+    "editor.defaultFormatter": "ms-python.black-formatter", // Example: uses the Black formatter extension
+
+    // Enables code actions on save, such as organizing imports automatically.
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit"
+    },
+
+    // Configures linting extensions (deprecated settings like "python.linting.pylintEnabled" are no longer used).
+    // Linting is now handled by specific linter extensions like Pylance/Pyright.
+
+    // Adds specific directories to the list where the Python extension looks for modules for auto-completion and imports.
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}/src",
+        "${workspaceFolder}/server"
+    ],
+
+    // General editor setting to trim trailing whitespace on save.
+    "files.trimTrailingWhitespace": true,
+
+    // Language-specific settings can also be defined in a [python] scope
+    "[python]": {
+        "editor.wordWrap": "on",
+        "editor.insertSpaces": true,
+        "editor.tabSize": 4
+    }
+}
